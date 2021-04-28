@@ -1,0 +1,23 @@
+ans1 :select * from acotr;
+ans2: SELECT * FROM actor WHERE first_name = "John";
+ans3:   SELECT * FROM actor WHERE last_name = "Neeson";
+ans4:SELECT * FROM actor WHERE actor_id%10 = 0;
+ans5: SELECT * FROM film WHERE film_id = 100
+ans6:SELECT * FROM film WHERE rating = "R";
+ans 7:SELECT * FROM film WHERE rating != "R";
+ans8:SELECT * FROM film ORDER BY length ASC LIMIT 3;
+ans9: SELECT title FROM film WHERE length=(SELECT MAX(length)FROM film);
+ans 10: SELECT * FROM film WHERE special_features = "Deleted Scenes";
+ans 13: SELECT  * FROM film_actor WHERE actor_id=(SELECT MAX(actor_id) FROM film_actor);
+ans 14: SELECT release_year FROM film WHERE title = "Academy Dinosaur";
+ans15: SELECT AVG(length) FROM film;
+ans 16; SELECT AVG(length) FROM film_category c JOIN film p ON c.film_id= p.film_id;
+ans 17: SELECT * FROM film_list WHERE category = "robot";
+ans 18:SELECT COUNT(title) FROM film WHERE release_year = "2010";
+ans 19: SELECT * FROM film_list WHERE category = "Horror";
+ans 20: SELECT * FROM staff WHERE staff_id = 2;
+ans 21: SELECT * FROM film_list WHERE actors ="Fred Costner";
+ans 22: SELECT DISTICT country FROM country;
+ANS 23:SELECT * FROM language ORDER BY name DESC;
+ans24:SELECT * FROM actor WHERE last_name LIKE "%son";
+ans25:SELECT MAX(category_id) FROM film_category
