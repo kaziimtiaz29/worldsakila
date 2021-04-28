@@ -15,3 +15,14 @@ q.Using aggregate functions, return the number of countries the database contain
 ans:SELECT COUNT(Name) FROM country;
 countries with headofstate elisab*
 ans: SELECT * FROM country WHERE Name ="United Kingdom";
+population to area ratio top 10
+ans: SELECT * FROM country ORDER BY Population/SurfaceArea DESC LIMIT 10;
+dsitinct languages
+ans:SELECT DISTINCT Language FROM countrylanguage;
+list top 10 with gnp
+ans:SELECT * FROM country ORDER BY GNP DESC LIMIT 10;
+ans to 16:SELECT CountryCode,COUNT(Language) FROM countrylanguage GROUP BY CountryCode;
+ans to 17:SELECT *FROM country c JOIN countrylanguage p ON c.Code=p.CountryCode WHERE language ="German" AND Percentage > 50;
+ANS TO 18 SELECT * FROM country ORDER BY LifeExpectancy ASC LIMIT 1;
+ans to 19:SELECT * FROM country ORDER BY GovernmentForm DESC LIMIT 3;
+ans to 20: SELECT * FROM country WHERE indepyear !=0;
